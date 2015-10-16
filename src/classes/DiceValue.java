@@ -23,7 +23,8 @@ public enum DiceValue {
 	}
 	
 	public static DiceValue getRandom() {
-		int random = RANDOM.nextInt(DiceValue.SPADE.ordinal());
+		int random = RANDOM.nextInt(DiceValue.SPADE.ordinal() + 1);
+		//int random = RANDOM.nextInt(DiceValue.SPADE.ordinal()); was the original code, fixing it allows Spades to appear and fixes bug 2
 		return values()[random];
 	}
 	
